@@ -1,0 +1,15 @@
+[package]
+name = "event-dispatch"
+version = "0.1.0"
+edition = "2021"
+authors = ["Thomas Holloway <nyxtom@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+description = "Type safe bidirectional event dispatching using channels and functional middleware"
+homepage = "https://github.com/nyxtom/event-dispatch"
+repository = "https://github.com/nyxtom/event-dispatch"
+keywords = ["middleware", "events", "monad", "dispatch"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
