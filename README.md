@@ -1,5 +1,9 @@
 # eventroute
 
+[![latest version](https://img.shields.io/crates/v/eventroute.svg)](https://crates.io/crates/eventroute)
+[![documentation](https://docs.rs/eventroute/badge.svg)](https://docs.rs/eventroute)
+![license](https://img.shields.io/crates/l/eventroute.svg)
+
 *eventroute* provides a type safe middleware routing using generics rather than a specific event name or identifier. Middleware can be directly passed into `.on` while `.emit` provides a simple mechanism for dispatching to callback middleware.
 
 ## Examples
