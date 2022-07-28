@@ -33,6 +33,10 @@ pub struct Router {
 }
 
 impl Router {
+    pub fn new() -> Self {
+        Self::default()
+    }
+
     pub fn on<T, Args>(&mut self, handler: T)
     where
         T: Handler<Args>,
@@ -59,6 +63,10 @@ impl Router {
     }
 }
 
+pub fn new() -> Router {
+    Router::new()
+}
+
 impl<Func, T> Handler<T> for Func
 where
     Func: 'static + Fn(T) -> (),
@@ -82,7 +90,7 @@ mod tests {
 
     #[test]
     fn test_router() {
-        let mut router = Router::default();
+        let mut router = Router::new();
         router.on(|i: i32| {
             println!("{}", i * 10);
         });

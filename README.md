@@ -1,12 +1,10 @@
-# event-dispatch
+# eventroute
 
-Event dispatch provides a type safe middleware routing using generics rather than a specific event name or identifier. Middleware can be directly passed into `.on` while `.emit` provides a simple mechanism for dispatching to callback middleware.
+*eventroute* provides a type safe middleware routing using generics rather than a specific event name or identifier. Middleware can be directly passed into `.on` while `.emit` provides a simple mechanism for dispatching to callback middleware.
 
 ## Examples
 
 ```rust
-use event_dispatch::Router;
-
 pub struct Test {
     foo: i32,
 }
@@ -17,7 +15,7 @@ pub struct Foo {
 
 #[test]
 fn test_router() {
-    let mut router = Router::default();
+    let mut router = eventroute::new();
     router.on(|i: i32| {
         println!("{}", i * 10);
     });
